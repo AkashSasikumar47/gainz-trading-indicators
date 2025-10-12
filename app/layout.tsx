@@ -7,9 +7,8 @@ import Footer from "./components/Footer/Footer";
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Node | IEEE SRMIST",
-  description:
-    "Stay updated with all IEEE events, workshops, and meetings in one sleek, minimal feed.",
+  title: "Gainz",
+  description: "Custom TradingView Indicators for Smarter Decisions",
   icons: {
     icon: "/favicon.ico",
   },
