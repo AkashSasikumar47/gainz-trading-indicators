@@ -25,7 +25,7 @@ const Explore = () => {
             className="w-full h-auto object-cover rounded-lg shadow-lg mb-3"
           />
           <h3 className="font-medium text-base">
-            📈 Adaptive Moving Average (AMA)
+            Adaptive Moving Average (AMA)
           </h3>
           <p className="font-normal text-sm">
             A TradingView indicator that tracks trend momentum and adjusts
@@ -39,7 +39,7 @@ const Explore = () => {
             alt="Bollinger Bands TradingView Indicator"
             className="w-full h-auto object-cover rounded-lg shadow-lg mb-3"
           />
-          <h3 className="font-medium text-base">📊 Bollinger Bands</h3>
+          <h3 className="font-medium text-base">Bollinger Bands</h3>
           <p className="font-normal text-sm">
             Identify price extremes and market volatility using this TradingView
             Bollinger Bands indicator for smarter trading decisions.
@@ -52,7 +52,7 @@ const Explore = () => {
             alt="Moon Phases TradingView Indicator"
             className="w-full h-auto object-cover rounded-lg shadow-lg mb-3"
           />
-          <h3 className="font-medium text-base">🌙 Moon Phases</h3>
+          <h3 className="font-medium text-base">Moon Phases</h3>
           <p className="font-normal text-sm">
             A unique TradingView tool linking lunar cycles with market behavior,
             helping traders anticipate potential market movements.

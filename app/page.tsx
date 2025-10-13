@@ -9,7 +9,7 @@ import CTA from "./components/CTA/CTA";
 
 export default function Page() {
   return (
-    <div className="bg-gray-100">
+    <div>
       <Navbar />
       <Hero />
       <About />
