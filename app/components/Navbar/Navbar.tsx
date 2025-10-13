@@ -16,14 +16,12 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 max-w-screen-sm bg-white mx-auto px-4 py-4 flex flex-col gap-4">
       <div className="flex justify-between items-center">
-        <p className="font-bold text-base text-orange-500 hover:text-black">
-          GAINZ
-        </p>
-
+        <Link href="/" className={getLinkClass("/")}>
+          <p className="font-bold text-base text-orange-500 hover:text-black">
+            GAINZ
+          </p>
+        </Link>
         <div className="flex gap-6">
-          <Link href="/" className={getLinkClass("/")}>
-            Home
-          </Link>
           <Link href="/indicators" className={getLinkClass("/indicators")}>
             Indicators
           </Link>

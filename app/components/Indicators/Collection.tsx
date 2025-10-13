@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const indicators = [
   {
@@ -214,6 +215,19 @@ const Collection = () => {
           trader refining your strategy, these tools are built to help you trade
           with confidence and consistency.
         </p>
+        <p>
+          All GAINZ indicators are fully open-source and available on GitHub —
+          inspect the code, test it in TradingView, and even contribute to make
+          these tools better.
+        </p>
+        <Link
+          href="https://github.com/AkashSasikumar47"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-black hover:text-orange-500 hover:underline font-medium text-sm py-4"
+        >
+          Visit GitHub →
+        </Link>
       </div>
     </section>
   );
