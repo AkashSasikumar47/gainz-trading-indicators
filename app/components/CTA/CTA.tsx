@@ -5,12 +5,14 @@ const CTA = () => {
   return (
     <section
       id="Call to Action"
-      className="max-w-screen-sm bg-white mx-auto px-4 py-4 flex flex-col gap-8"
+      className="max-w-screen-xl bg-white mx-auto px-4 py-4 md:px-8 lg:py-8 flex flex-col gap-8 lg:gap-12"
       aria-label="Call to Action"
     >
-      <h2 className="font-bold text-lg">Take Your Trading to the Next Level</h2>
+      <h2 className="font-bold text-xl lg:text-2xl">
+        Take Your Trading to the Next Level
+      </h2>
 
-      <div className="font-normal text-sm text-neutral-500 flex flex-col gap-3">
+      <div className="max-w-2xl font-normal text-sm lg:text-base text-neutral-500 flex flex-col gap-3">
         <p>
           Ready to level up your stock market analysis and trading strategies?
         </p>
@@ -21,7 +23,7 @@ const CTA = () => {
         </p>
         <Link
           href="/indicators"
-          className="text-black hover:text-orange-500 hover:underline font-medium text-sm py-4"
+          className="text-black hover:text-orange-500 hover:underline font-medium text-sm lg:text-base"
         >
           Explore Indicators →
         </Link>
@@ -34,7 +36,7 @@ const CTA = () => {
           href="https://github.com/AkashSasikumar47"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-black hover:text-orange-500 hover:underline font-medium text-sm py-4"
+          className="text-black hover:text-orange-500 hover:underline font-medium text-sm lg:text-base"
         >
           Visit GitHub →
         </Link>

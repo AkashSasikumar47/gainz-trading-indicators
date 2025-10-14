@@ -180,32 +180,38 @@ const indicators = [
 const Collection = () => {
   return (
     <section
-      id="explore"
-      className="max-w-screen-sm bg-white mx-auto px-4 py-4 flex flex-col gap-8"
-      aria-label="Explore TradingView Indicators"
+      id="collection"
+      className="max-w-screen-xl bg-white mx-auto px-4 py-4 md:px-8 lg:py-8 flex flex-col gap-8 lg:gap-12"
+      aria-label="Collection of TradingView Indicators"
     >
-      <h2 className="font-bold text-lg">Our Custom TradingView Indicators</h2>
-      <p className="font-normal text-base text-neutral-500">
+      <h2 className="font-bold text-xl lg:text-2xl">
+        Our Custom TradingView Indicators
+      </h2>
+      <p className="max-w-2xl font-normal text-sm lg:text-base text-neutral-500">
         Discover a complete suite of custom TradingView indicators, designed to
         sharpen your stock market analysis and enhance your trading decisions
         with clear, actionable insights.
       </p>
 
-      <div className="text-neutral-500 flex flex-col gap-6">
+      <div className="text-neutral-500 flex flex-col gap-6 md:grid md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
         {indicators.map((indicator, index) => (
-          <article key={index} className="flex flex-col gap-2">
+          <article key={index} className="flex flex-col gap-3">
             <img
               src={indicator.image}
               alt={indicator.alt}
-              className="w-full h-auto object-cover rounded-lg shadow-lg mb-3"
+              className="w-full h-auto object-cover rounded-lg shadow-lg mb-2"
             />
-            <h3 className="font-medium text-base">{indicator.name}</h3>
-            <p className="font-normal text-sm">{indicator.description}</p>
+            <h3 className="font-medium text-base lg:text-lg">
+              {indicator.name}
+            </h3>
+            <p className="font-normal text-xs lg:text-sm">
+              {indicator.description}
+            </p>
           </article>
         ))}
       </div>
 
-      <div className="text-neutral-500 font-normal text-sm flex flex-col gap-3">
+      <div className="max-w-2xl font-normal text-sm lg:text-base text-neutral-500 flex flex-col gap-3">
         <p>
           Each GAINZ indicator is engineered in Pine Script for maximum clarity,
           speed, and accuracy.
@@ -224,7 +230,7 @@ const Collection = () => {
           href="https://github.com/AkashSasikumar47"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-black hover:text-orange-500 hover:underline font-medium text-sm py-4"
+          className="text-black hover:text-orange-500 hover:underline font-medium text-sm lg:text-base"
         >
           Visit GitHub →
         </Link>
