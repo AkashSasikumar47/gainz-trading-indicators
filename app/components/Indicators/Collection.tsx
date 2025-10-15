@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const indicators = [
   {
@@ -184,16 +186,34 @@ const Collection = () => {
       className="max-w-screen-xl bg-white mx-auto px-4 py-4 md:px-8 lg:py-8 flex flex-col gap-8 lg:gap-12"
       aria-label="Collection of TradingView Indicators"
     >
-      <h2 className="font-bold text-xl lg:text-2xl">
+      <motion.h2
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="font-bold text-xl lg:text-2xl"
+      >
         Our Custom TradingView Indicators
-      </h2>
-      <p className="max-w-2xl font-normal text-sm lg:text-base text-neutral-500">
+      </motion.h2>
+      <motion.p
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, duration: 1.2, ease: "easeOut" }}
+        className="max-w-2xl font-normal text-sm lg:text-base text-neutral-500"
+      >
         Discover a complete suite of custom TradingView indicators, designed to
         sharpen your stock market analysis and enhance your trading decisions
         with clear, actionable insights.
-      </p>
+      </motion.p>
 
-      <div className="text-neutral-500 flex flex-col gap-6 md:grid md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5, duration: 1.2, ease: "easeOut" }}
+        className="text-neutral-500 flex flex-col gap-6 md:grid md:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+      >
         {indicators.map((indicator, index) => (
           <article key={index} className="flex flex-col gap-3">
             <img
@@ -209,9 +229,15 @@ const Collection = () => {
             </p>
           </article>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="max-w-2xl font-normal text-sm lg:text-base text-neutral-500 flex flex-col gap-3">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.7, duration: 1.2, ease: "easeOut" }}
+        className="max-w-2xl font-normal text-sm lg:text-base text-neutral-500 flex flex-col gap-3"
+      >
         <p>
           Each GAINZ indicator is engineered in Pine Script for maximum clarity,
           speed, and accuracy.
@@ -234,7 +260,7 @@ const Collection = () => {
         >
           Visit GitHub →
         </Link>
-      </div>
+      </motion.div>
     </section>
   );
 };

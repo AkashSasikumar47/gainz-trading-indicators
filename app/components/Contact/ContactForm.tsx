@@ -1,4 +1,6 @@
+"use client";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -14,12 +16,19 @@ const ContactForm = () => {
       className="max-w-screen-xl bg-white mx-auto px-4 py-12 md:px-8 lg:py-20"
       aria-label="Contact Section"
     >
-      <div className="flex flex-col gap-8 lg:grid lg:grid-cols-3 lg:gap-8 items-start">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="flex flex-col gap-8 lg:grid lg:grid-cols-3 lg:gap-8 items-start"
+      >
         <p className="max-w-sm font-normal text-sm lg:text-base text-neutral-500 lg:leading-relaxed">
           Your insights and feedback help{" "}
           <span className="font-semibold text-black">GAINZ</span> grow stronger.
           Let’s build smarter, data-driven trading tools — together.
         </p>
+
         <form
           className="bg-white rounded-lg border border-neutral-200 p-4 shadow-xs flex flex-col gap-4 w-full lg:col-span-2 "
           aria-label="Contact GAINZ Form"
@@ -73,7 +82,7 @@ const ContactForm = () => {
             Send Message
           </button>
         </form>
-      </div>
+      </motion.div>
     </section>
   );
 };

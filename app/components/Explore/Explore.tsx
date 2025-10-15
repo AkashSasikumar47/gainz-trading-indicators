@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Explore = () => {
   return (
@@ -8,16 +10,35 @@ const Explore = () => {
       className="max-w-screen-xl bg-white mx-auto px-4 py-4 md:px-8 lg:py-8 flex flex-col gap-8 lg:gap-12"
       aria-label="Explore TradingView Indicators"
     >
-      <h2 className="font-bold text-xl lg:text-2xl">
+      <motion.h2
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="font-bold text-xl lg:text-2xl"
+      >
         Explore Powerful TradingView Indicators
-      </h2>
-      <p className="max-w-2xl font-normal text-sm lg:text-base text-neutral-500">
+      </motion.h2>
+
+      <motion.p
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
+        className="max-w-2xl font-normal text-sm lg:text-base text-neutral-500"
+      >
         Discover a complete suite of custom TradingView indicators, designed to
         sharpen your stock market analysis and enhance your trading decisions
         with clear, actionable insights.
-      </p>
+      </motion.p>
 
-      <div className="text-neutral-500 flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-8">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.4, duration: 1.2, ease: "easeOut" }}
+        className="text-neutral-500 flex flex-col gap-6 lg:grid lg:grid-cols-3 lg:gap-8"
+      >
         <article className="flex flex-col gap-3">
           <img
             src="/Indicators/Adaptive Moving Average (AMA).png"
@@ -58,13 +79,21 @@ const Explore = () => {
             helping traders anticipate potential market movements.
           </p>
         </article>
-      </div>
-      <Link
-        href="/indicators"
-        className="text-black hover:text-orange-500 hover:underline font-medium text-sm lg:text-base"
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.6, duration: 1.2, ease: "easeOut" }}
       >
-        See All Indicators →
-      </Link>
+        <Link
+          href="/indicators"
+          className="text-black hover:text-orange-500 hover:underline font-medium text-sm lg:text-base"
+        >
+          See All Indicators →
+        </Link>
+      </motion.div>
     </section>
   );
 };

@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const CTA = () => {
   return (
@@ -8,11 +10,23 @@ const CTA = () => {
       className="max-w-screen-xl bg-white mx-auto px-4 py-4 md:px-8 lg:py-8 flex flex-col gap-8 lg:gap-12"
       aria-label="Call to Action"
     >
-      <h2 className="font-bold text-xl lg:text-2xl">
+      <motion.h2
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+        className="font-bold text-xl lg:text-2xl"
+      >
         Take Your Trading to the Next Level
-      </h2>
+      </motion.h2>
 
-      <div className="max-w-2xl font-normal text-sm lg:text-base text-neutral-500 flex flex-col gap-3">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.3, duration: 1.2, ease: "easeOut" }}
+        className="max-w-2xl font-normal text-sm lg:text-base text-neutral-500 flex flex-col gap-3"
+      >
         <p>
           Ready to level up your stock market analysis and trading strategies?
         </p>
@@ -40,7 +54,7 @@ const CTA = () => {
         >
           Visit GitHub →
         </Link>
-      </div>
+      </motion.div>
     </section>
   );
 };
