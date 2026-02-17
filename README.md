@@ -1,30 +1,24 @@
-# GAINZ TradingView Indicators
+# GAINZ - Trading Indicators Platform
 
 ![GAINZ Banner](./public/Images/banner.png)
 
-GAINZ is a curated platform of **custom, open-source TradingView indicators** designed to help traders of all levels analyze the stock market with confidence and precision.
+A collection of 25 custom TradingView indicators built with Pine Script. Open-source tools for traders to analyze the stock market.
 
-## 🛠️ Getting Started
+## Tech Stack
 
-Follow these steps to set up and run the project locally.
+Next.js 15 • TypeScript • Tailwind CSS • Framer Motion
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/AkashSasikumar47/gainz-trading-indicators.git
-    ```
-2.  **Install dependencies:**
-    ```bash
-    cd gainz-trading-indicators
-    npm install
-    ```
-3.  **Run the development server:**
-    ```bash
-    npm run dev
-    ```
-    Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
----
+```bash
+git clone https://github.com/AkashSasikumar47/gainz-trading-indicators.git
+cd gainz-trading-indicators
+npm install
+npm run dev
+```
 
-## 📜 License
+Open [http://localhost:3000](http://localhost:3000)
 
-This project is open-source. All GAINZ indicators and code are licensed under the **MIT License**.
+## License
+
+MIT License
