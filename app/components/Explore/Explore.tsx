@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -7,7 +6,7 @@ const Explore = () => {
   return (
     <section
       id="explore"
-      className="max-w-screen-xl bg-white mx-auto px-4 py-4 md:px-8 lg:py-8 flex flex-col gap-8 lg:gap-12"
+      className="max-w-screen-xl bg-white mx-auto px-4 py-12 md:px-8 lg:py-16 flex flex-col gap-8 lg:gap-12"
       aria-label="Explore TradingView Indicators"
     >
       <motion.h2
@@ -43,6 +42,7 @@ const Explore = () => {
           <img
             src="/Indicators/Adaptive Moving Average (AMA).png"
             alt="Adaptive Moving Average (AMA) TradingView Indicator"
+            loading="lazy"
             className="w-full h-auto object-cover rounded-lg shadow-lg mb-2"
           />
           <h3 className="font-medium text-base lg:text-lg">
@@ -58,6 +58,7 @@ const Explore = () => {
           <img
             src="/Indicators/Bollinger Bands.png"
             alt="Bollinger Bands TradingView Indicator"
+            loading="lazy"
             className="w-full h-auto object-cover rounded-lg shadow-lg mb-2"
           />
           <h3 className="font-medium text-base lg:text-lg">Bollinger Bands</h3>
@@ -71,6 +72,7 @@ const Explore = () => {
           <img
             src="/Indicators/Moon Phases.png"
             alt="Moon Phases TradingView Indicator"
+            loading="lazy"
             className="w-full h-auto object-cover rounded-lg shadow-lg mb-2"
           />
           <h3 className="font-medium text-base lg:text-lg">Moon Phases</h3>

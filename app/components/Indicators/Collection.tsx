@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -183,7 +182,7 @@ const Collection = () => {
   return (
     <section
       id="collection"
-      className="max-w-screen-xl bg-white mx-auto px-4 py-4 md:px-8 lg:py-8 flex flex-col gap-8 lg:gap-12"
+      className="max-w-screen-xl bg-white mx-auto px-4 py-12 md:px-8 lg:py-16 flex flex-col gap-8 lg:gap-12"
       aria-label="Collection of TradingView Indicators"
     >
       <motion.h2
@@ -219,6 +218,7 @@ const Collection = () => {
             <img
               src={indicator.image}
               alt={indicator.alt}
+              loading="lazy"
               className="w-full h-auto object-cover rounded-lg shadow-lg mb-2"
             />
             <h3 className="font-medium text-base lg:text-lg">

@@ -1,12 +1,11 @@
 "use client";
-import React from "react";
 import { motion } from "framer-motion";
 
 const Purpose = () => {
   return (
     <section
       id="purpose"
-      className="max-w-screen-xl bg-white mx-auto px-4 py-4 md:px-8 lg:py-8 flex flex-col gap-8 lg:gap-12"
+      className="max-w-screen-xl bg-white mx-auto px-4 py-12 md:px-8 lg:py-16 flex flex-col gap-8 lg:gap-12"
       aria-label="Why Traders Choose GAINZ"
     >
       <motion.h2

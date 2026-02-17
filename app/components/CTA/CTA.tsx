@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -7,7 +6,7 @@ const CTA = () => {
   return (
     <section
       id="Call to Action"
-      className="max-w-screen-xl bg-white mx-auto px-4 py-4 md:px-8 lg:py-8 flex flex-col gap-8 lg:gap-12"
+      className="max-w-screen-xl bg-white mx-auto px-4 py-12 md:px-8 lg:py-16 flex flex-col gap-8 lg:gap-12"
       aria-label="Call to Action"
     >
       <motion.h2

@@ -10,11 +10,25 @@ const ContactForm = () => {
     message: "",
   });
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    console.log("Form submitted:", formData);
+    alert("Thank you for your message! We'll get back to you soon.");
+
+    setFormData({
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
+  };
+
   return (
     <section
-      id="contact"
+      id="contact-form"
       className="max-w-screen-xl bg-white mx-auto px-4 py-12 md:px-8 lg:py-20"
-      aria-label="Contact Section"
+      aria-label="Contact Form Section"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -30,6 +44,7 @@ const ContactForm = () => {
         </p>
 
         <form
+          onSubmit={handleSubmit}
           className="bg-white rounded-lg border border-neutral-200 p-4 shadow-xs flex flex-col gap-4 w-full lg:col-span-2 "
           aria-label="Contact GAINZ Form"
         >
