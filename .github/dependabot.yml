@@ -1,0 +1,48 @@
+version: 2
+
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: REPO
+    open-pull-requests-limit: 10
+    ignore:
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
+    groups:
+      next-react:
+        patterns:
+          ["next", "react", "react-dom", "@types/react", "@types/react-dom"]
+        update-types: [minor, patch]
+      styling:
+        patterns:
+          [
+            "tailwindcss",
+            "@tailwindcss/*",
+            "postcss",
+            "tw-animate-css",
+            "cn",
+            "class-variance-authority",
+          ]
+        update-types: [minor, patch]
+      ui:
+        patterns: ["radix-ui", "lucide-react", "motion"]
+        update-types: [minor, patch]
+      tooling:
+        patterns:
+          [
+            "typescript",
+            "prettier",
+            "prettier-plugin-tailwindcss",
+            "@types/node",
+          ]
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: REPO
