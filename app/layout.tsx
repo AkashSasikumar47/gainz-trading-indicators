@@ -1,34 +1,49 @@
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Fragment_Mono, Manrope } from "next/font/google";
+import { MotionProvider } from "@/components/motion/motion-provider";
 import "./globals.css";
 
-import Footer from "./components/Footer/Footer";
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+});
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const fragmentMono = Fragment_Mono({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-fragment-mono",
+});
 
 export const metadata: Metadata = {
-  title: "Gainz",
-  description: "Custom TradingView Indicators for Smarter Decisions",
-  icons: {
-    icon: "/favicon.ico",
+  metadataBase: new URL("https://gainz-trading-indicators.vercel.app"),
+  title: "GAINZ — Open-source TradingView indicators",
+  description:
+    "35 TradingView indicators written in Pine Script, free to read, copy and use. Trend, momentum, volatility, volume and levels.",
+  openGraph: {
+    title: "GAINZ — Open-source TradingView indicators",
+    description:
+      "35 TradingView indicators written in Pine Script, free to read, copy and use.",
+    url: "/",
+    siteName: "GAINZ",
+    type: "website",
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#ffffff" />
-      </head>
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#fafafa",
+};
 
-      <body className={`${montserrat.className} flex flex-col min-h-screen`}>
-        <main className="flex-grow">{children}</main>
-        <Footer />
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html
+      lang="en"
+      className={`${manrope.variable} ${fragmentMono.variable} font-sans`}
+    >
+      <body className="min-h-dvh antialiased">
+        <MotionProvider>{children}</MotionProvider>
       </body>
     </html>
   );
