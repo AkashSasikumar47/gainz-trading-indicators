@@ -1,14 +1,53 @@
-# GAINZ
+<p align="center">
+  <img src="app/apple-icon.png" width="72" height="72" alt="GAINZ logo" />
+</p>
+
+<h1 align="center">GAINZ</h1>
+
+<p align="center">35 open-source TradingView indicators in Pine Script v6.</p>
+
+---
 
 ![GAINZ](./app/opengraph-image.png)
 
-35 open-source TradingView indicators, written in Pine Script v6 and free to use: trend, momentum, volatility, volume and levels. Each one opens with its chart, how to read it, its default settings and a link to the source.
+A one-page gallery of 35 free TradingView indicators: trend, momentum, volatility, volume and levels. Each one opens with its chart, how to read it, its default settings and a link to the source.
 
 Live at [gainz-trading-indicators.vercel.app](https://gainz-trading-indicators.vercel.app).
 
-## The scripts
+## Features
 
-The Pine Script lives in seven collections of five indicators each:
+- **Gallery:** every indicator as a light TradingView chart, in one to three columns.
+- **Indicator dialog:** the chart, what it does, how to read it, its defaults and View source, with previous and next (arrow keys work too).
+- **Intro:** a short loader that counts the charts in, then hands the wordmark to the panel.
+- Works on desktop and phone. No backend, no accounts, no tracking.
+
+## Stack
+
+Next.js 16, React 19, TypeScript 7, Tailwind CSS 4, shadcn/ui, Motion and Vercel. Node 24 and pnpm 12.6.
+
+## Getting started
+
+```bash
+pnpm install
+pnpm dev                           # http://localhost:3000
+```
+
+No environment variables are needed.
+
+## Scripts
+
+| Command              | What it does              |
+| -------------------- | ------------------------- |
+| `pnpm dev`           | Start the dev server      |
+| `pnpm build`         | Production build          |
+| `pnpm typecheck`     | Type-check the project    |
+| `pnpm format`        | Format with Prettier      |
+| `pnpm format:check`  | Check formatting (CI)     |
+| `pnpm ui:add <name>` | Add a shadcn/ui component |
+
+## Data
+
+Indicator content lives in `lib/indicators.ts` and the charts in `public/indicators`. The Pine Script lives in seven collections of five indicators each:
 
 | Collection                                                            | Indicators                                                                                           |
 | --------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -22,26 +61,9 @@ The Pine Script lives in seven collections of five indicators each:
 
 To use one, open its `.pine` file, paste it into the [Pine Editor](https://www.tradingview.com/pine/) on TradingView, save it and add it to your chart.
 
-## Stack
+## Deployment
 
-Next.js 16, React 19, TypeScript 7, Tailwind CSS 4, shadcn/ui and Motion, on Node 24 with pnpm 12.
-
-```bash
-pnpm install
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-| Command              | Does                            |
-| -------------------- | ------------------------------- |
-| `pnpm dev`           | Runs the site on localhost:3000 |
-| `pnpm build`         | Builds for production           |
-| `pnpm typecheck`     | Type-checks the app             |
-| `pnpm format`        | Formats the repo with Prettier  |
-| `pnpm ui:add <name>` | Adds a shadcn/ui component      |
-
-Indicator content lives in `lib/indicators.ts` and the charts in `public/indicators`.
+Vercel builds `main` only, in region `bom1`. There is nothing to configure.
 
 ## Disclaimer
 
@@ -49,4 +71,4 @@ For learning and research. Indicators describe what price has done, not what it 
 
 ## License
 
-[MIT](./LICENSE)
+[MIT](LICENSE)
