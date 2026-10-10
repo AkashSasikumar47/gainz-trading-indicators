@@ -3,6 +3,7 @@ name: CI
 on:
   pull_request:
     branches: [main]
+    types: [opened, edited, synchronize, reopened]
   push:
     branches: [main]
 
@@ -18,6 +19,22 @@ jobs:
           if [[ "$BRANCH" =~ ^dependabot/ ]]; then exit 0; fi
           if [[ ! "$BRANCH" =~ ^[a-z0-9-]+/[a-z0-9]+(-[a-z0-9]+)*$ ]]; then
             echo "Branch must be <scope>/<topic>, got: $BRANCH"
+            exit 1
+          fi
+
+  pr-title:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR title
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+          BRANCH: ${{ github.head_ref }}
+        run: |
+          pattern='^[A-Z0-9-]+: .{1,75}$'
+          if [[ "$BRANCH" =~ ^dependabot/ ]]; then pattern='^[A-Z0-9-]+: .+$'; fi
+          if [[ ! "$TITLE" =~ $pattern ]]; then
+            echo "PR title must be SCOPE: change, got: $TITLE"
             exit 1
           fi
 
@@ -43,6 +60,7 @@ jobs:
           exit $failed
 
   verify:
+    if: github.event.action != 'edited'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
