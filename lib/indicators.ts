@@ -1,4 +1,4 @@
-export const CATEGORIES = [
+const CATEGORIES = [
   "Trend",
   "Momentum",
   "Volatility",
@@ -6,7 +6,7 @@ export const CATEGORIES = [
   "Levels",
 ] as const;
 
-export type Category = (typeof CATEGORIES)[number];
+type Category = (typeof CATEGORIES)[number];
 
 export type Indicator = {
   slug: string;
