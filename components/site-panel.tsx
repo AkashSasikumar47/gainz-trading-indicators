@@ -29,12 +29,12 @@ export function SitePanel({ settled }: { settled: boolean }) {
 
   return (
     <aside className="flex flex-col justify-between gap-12 text-sm leading-snug font-medium max-lg:contents lg:sticky lg:top-0 lg:z-[45] lg:h-dvh lg:pt-[max(1.25rem,env(safe-area-inset-top))] lg:pb-[max(1.25rem,env(safe-area-inset-bottom))]">
-      <div className="relative z-[45] flex flex-col gap-8 max-lg:order-1 max-lg:pt-[max(1.25rem,env(safe-area-inset-top))] max-lg:pb-10">
+      <div className="relative z-[45] flex flex-col gap-6 max-lg:order-1 max-lg:pt-[max(1.25rem,env(safe-area-inset-top))] max-lg:pb-10">
         <h1 className="sr-only">GAINZ, open-source TradingView indicators</h1>
         {settled ? (
-          <Wordmark key="shared" shared />
+          <Wordmark key="shared" shared className="w-24" />
         ) : (
-          <Wordmark key="placeholder" className="invisible" />
+          <Wordmark key="placeholder" className="invisible w-24" />
         )}
 
         <motion.div {...appear(0)} className="flex flex-col gap-3">

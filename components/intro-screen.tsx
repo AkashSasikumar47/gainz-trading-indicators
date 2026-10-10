@@ -14,9 +14,15 @@ import { INDICATORS } from "@/lib/indicators";
 
 const pad = (value: number) => String(Math.round(value)).padStart(2, "0");
 
+const STACK =
+  "fixed inset-0 flex flex-col items-center justify-center gap-6 px-gutter motion-reduce:hidden";
+
+const WIDTH = "w-48 sm:w-56";
+
 export function IntroScreen({ playing }: { playing: boolean }) {
   const count = useMotionValue(0);
   const shown = useTransform(count, pad);
+  const progress = useTransform(count, [0, INDICATORS.length], [0, 1]);
 
   useEffect(() => {
     const controls = animate(count, INDICATORS.length, {
@@ -34,30 +40,37 @@ export function IntroScreen({ playing }: { playing: boolean }) {
           <motion.div
             key="intro-backdrop"
             aria-hidden
-            className="fixed inset-0 z-40 flex items-end bg-background px-gutter pb-[max(1.25rem,env(safe-area-inset-bottom))] motion-reduce:hidden"
+            className={`${STACK} z-40 bg-background`}
             exit={{ opacity: 0, transition: { duration: INTRO.fade } }}
           >
+            <Wordmark className={`invisible ${WIDTH}`} />
             <motion.div
-              className="flex w-full justify-between font-mono text-xs text-muted-foreground"
+              className={`flex h-8 flex-col justify-between ${WIDTH}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: INTRO.count }}
             >
-              <span>Pine Script indicators</span>
-              <span>
-                <motion.span className="text-foreground">{shown}</motion.span> /{" "}
-                {pad(INDICATORS.length)}
-              </span>
+              <div className="h-px w-full bg-border">
+                <motion.div
+                  className="h-px origin-left bg-foreground"
+                  style={{ scaleX: progress }}
+                />
+              </div>
+              <div className="flex justify-between font-mono text-xs text-muted-foreground">
+                <span>Indicators</span>
+                <span>
+                  <motion.span className="text-foreground">{shown}</motion.span>{" "}
+                  / {pad(INDICATORS.length)}
+                </span>
+              </div>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
       {playing && (
-        <div
-          aria-hidden
-          className="pointer-events-none fixed inset-0 z-50 flex items-center px-gutter motion-reduce:hidden"
-        >
-          <Wordmark play shared className="w-full max-w-[150dvh]" />
+        <div aria-hidden className={`${STACK} pointer-events-none z-50`}>
+          <Wordmark play shared className={WIDTH} />
+          <div className={`h-8 ${WIDTH}`} />
         </div>
       )}
     </>
