@@ -100,7 +100,7 @@ export function IndicatorDialog({
               <dl className="flex flex-col font-mono text-xs">
                 <div className="flex justify-between gap-4 pb-1.5 text-muted-foreground">
                   <dt>Defaults</dt>
-                  <dd>Pine v{indicator.pine}</dd>
+                  <dd>Pine v6</dd>
                 </div>
                 {indicator.settings.map(([label, value]) => (
                   <div

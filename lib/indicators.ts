@@ -16,9 +16,7 @@ export type Indicator = {
   summary: string;
   reading: string;
   settings: [string, string][];
-  pine: number;
   repo: number;
-  path: string;
 };
 
 export const INDICATORS: Indicator[] = (
@@ -38,9 +36,7 @@ export const INDICATORS: Indicator[] = (
         ["Slow EMA", "30"],
         ["Source", "Close"],
       ],
-      pine: 4,
       repo: 5,
-      path: "indicators/Adaptive-Moving-Average.pine",
     },
     {
       slug: "aroon-oscillator",
@@ -52,9 +48,7 @@ export const INDICATORS: Indicator[] = (
       reading:
         "Above zero, recent highs dominate and the trend leans up. Below zero, lows dominate. A cross through zero is a change of hands.",
       settings: [["Length", "14"]],
-      pine: 5,
       repo: 3,
-      path: "indicators/Aroon-Oscillator.pine",
     },
     {
       slug: "average-true-range",
@@ -66,9 +60,7 @@ export const INDICATORS: Indicator[] = (
       reading:
         "It says nothing about direction. Use it to size stops and positions: a rising ATR means wider swings and more room to give.",
       settings: [["Length", "14"]],
-      pine: 5,
       repo: 2,
-      path: "indicators/atr.pine",
     },
     {
       slug: "awesome-oscillator",
@@ -84,9 +76,7 @@ export const INDICATORS: Indicator[] = (
         ["Slow", "34"],
         ["Alerts", "Colour change"],
       ],
-      pine: 5,
       repo: 6,
-      path: "indicators/Awesome-Oscillator.pine",
     },
     {
       slug: "bollinger-bands",
@@ -102,9 +92,7 @@ export const INDICATORS: Indicator[] = (
         ["Std. deviation", "2.0"],
         ["Source", "Close"],
       ],
-      pine: 5,
       repo: 2,
-      path: "indicators/bollinger_bands.pine",
     },
     {
       slug: "chandelier-exit",
@@ -120,9 +108,7 @@ export const INDICATORS: Indicator[] = (
         ["ATR multiplier", "3.0"],
         ["Labels", "Buy / Sell"],
       ],
-      pine: 4,
       repo: 5,
-      path: "indicators/Chandelier-Exit.pine",
     },
     {
       slug: "commodity-channel-index",
@@ -138,9 +124,7 @@ export const INDICATORS: Indicator[] = (
         ["Source", "HLC3"],
         ["Smoothing", "SMA 5"],
       ],
-      pine: 5,
       repo: 2,
-      path: "indicators/cci.pine",
     },
     {
       slug: "cumulative-volume-index",
@@ -155,9 +139,7 @@ export const INDICATORS: Indicator[] = (
         ["Exchange", "NYSE"],
         ["Also", "NASDAQ, AMEX, ARCX, US, DJ"],
       ],
-      pine: 5,
       repo: 6,
-      path: "indicators/Cumulative-Volume-Index.pine",
     },
     {
       slug: "exponential-moving-average",
@@ -172,9 +154,7 @@ export const INDICATORS: Indicator[] = (
         ["Length", "14"],
         ["Source", "Close"],
       ],
-      pine: 5,
       repo: 1,
-      path: "indicators/exponential_moving_average.pine",
     },
     {
       slug: "fibonacci-retracement",
@@ -190,9 +170,7 @@ export const INDICATORS: Indicator[] = (
         ["Depth", "10"],
         ["Extend", "Right"],
       ],
-      pine: 5,
       repo: 3,
-      path: "indicators/Fib-Retracement.pine",
     },
     {
       slug: "hull-moving-average",
@@ -207,9 +185,7 @@ export const INDICATORS: Indicator[] = (
         ["Length", "9"],
         ["Source", "Close"],
       ],
-      pine: 5,
       repo: 6,
-      path: "indicators/Hull-Moving-Average.pine",
     },
     {
       slug: "ichimoku-cloud",
@@ -226,9 +202,7 @@ export const INDICATORS: Indicator[] = (
         ["Span B", "52"],
         ["Lagging", "26"],
       ],
-      pine: 5,
       repo: 3,
-      path: "indicators/ichimoku-cloud.pine",
     },
     {
       slug: "macd",
@@ -244,9 +218,7 @@ export const INDICATORS: Indicator[] = (
         ["Slow EMA", "26"],
         ["Signal", "9"],
       ],
-      pine: 5,
       repo: 2,
-      path: "indicators/macd.pine",
     },
     {
       slug: "moon-phases",
@@ -261,9 +233,7 @@ export const INDICATORS: Indicator[] = (
         ["Waxing", "Blue"],
         ["Waning", "White"],
       ],
-      pine: 5,
       repo: 6,
-      path: "indicators/Moon-Phases.pine",
     },
     {
       slug: "on-balance-volume",
@@ -275,9 +245,7 @@ export const INDICATORS: Indicator[] = (
       reading:
         "OBV leading price higher hints that buyers are quietly accumulating. A divergence between the two is the warning sign.",
       settings: [["Smoothing", "SMA 5"]],
-      pine: 5,
       repo: 3,
-      path: "indicators/On-Balance-Volume.pine",
     },
     {
       slug: "parabolic-sar",
@@ -293,9 +261,7 @@ export const INDICATORS: Indicator[] = (
         ["AF step", "0.02"],
         ["AF max", "0.20"],
       ],
-      pine: 5,
       repo: 3,
-      path: "indicators/Parabolic-SAR.pine",
     },
     {
       slug: "relative-momentum-index",
@@ -311,9 +277,7 @@ export const INDICATORS: Indicator[] = (
         ["Momentum", "3"],
         ["Source", "Close"],
       ],
-      pine: 3,
       repo: 5,
-      path: "indicators/Relative-Momentum-Index.pine",
     },
     {
       slug: "relative-strength-index",
@@ -329,9 +293,7 @@ export const INDICATORS: Indicator[] = (
         ["Overbought", "70"],
         ["Oversold", "30"],
       ],
-      pine: 5,
       repo: 1,
-      path: "indicators/relative_strength_index.pine",
     },
     {
       slug: "simple-moving-average",
@@ -346,9 +308,7 @@ export const INDICATORS: Indicator[] = (
         ["Length", "14"],
         ["Source", "Close"],
       ],
-      pine: 5,
       repo: 1,
-      path: "indicators/simple_moving_average.pine",
     },
     {
       slug: "stochastic-oscillator",
@@ -364,9 +324,7 @@ export const INDICATORS: Indicator[] = (
         ["%K smoothing", "3"],
         ["%D smoothing", "3"],
       ],
-      pine: 5,
       repo: 1,
-      path: "indicators/stochastic_oscillator.pine",
     },
     {
       slug: "supertrend",
@@ -382,9 +340,7 @@ export const INDICATORS: Indicator[] = (
         ["Line 2", "ATR 11 × 2"],
         ["Line 3", "ATR 12 × 3"],
       ],
-      pine: 4,
       repo: 5,
-      path: "indicators/Supertrend-Indicator.pine",
     },
     {
       slug: "trading-volume",
@@ -399,9 +355,7 @@ export const INDICATORS: Indicator[] = (
         ["Average", "SMA 20"],
         ["Highlight", "Above 1×"],
       ],
-      pine: 5,
       repo: 1,
-      path: "indicators/trading_volume.pine",
     },
     {
       slug: "trend-strength-index",
@@ -409,16 +363,14 @@ export const INDICATORS: Indicator[] = (
       code: "TSI",
       category: "Momentum",
       summary:
-        "Measures how close to a straight line price has moved over the last 30 bars, from −1 to +1.",
+        "Measures how close to a straight line price has moved over the last 30 bars, from 0 to 1.",
       reading:
-        "Near +1 is a clean uptrend, near −1 a clean downtrend, and around zero there's no trend worth following.",
+        "Near 1, price has moved in a clean line; near 0, it has chopped back and forth with no trend worth following. It shows strength, not direction.",
       settings: [
         ["Length", "30"],
         ["Smoothing", "5"],
       ],
-      pine: 3,
       repo: 5,
-      path: "indicators/Trend-Strength-Index.pine",
     },
     {
       slug: "visible-average-price",
@@ -430,9 +382,7 @@ export const INDICATORS: Indicator[] = (
       reading:
         "A quick fair-value line for the window you're looking at. Above it, price is strong for that view; below it, weak.",
       settings: [["Source", "Close"]],
-      pine: 5,
       repo: 6,
-      path: "indicators/Visible-Average-Price.pine",
     },
     {
       slug: "williams-r",
@@ -447,9 +397,7 @@ export const INDICATORS: Indicator[] = (
         ["Length", "14"],
         ["Source", "Close"],
       ],
-      pine: 5,
       repo: 2,
-      path: "indicators/williams_r.pine",
     },
     {
       slug: "average-directional-index",
@@ -464,9 +412,7 @@ export const INDICATORS: Indicator[] = (
         ["ADX smoothing", "14"],
         ["DI length", "14"],
       ],
-      pine: 5,
       repo: 4,
-      path: "indicators/Average-Directional-Index.pine",
     },
     {
       slug: "balance-of-power",
@@ -478,9 +424,7 @@ export const INDICATORS: Indicator[] = (
       reading:
         "Above zero, buyers pushed price up through the bar; below zero, sellers did. The longer it stays on one side, the clearer the winner.",
       settings: [["Formula", "(C − O) / (H − L)"]],
-      pine: 5,
       repo: 7,
-      path: "indicators/Balance-of-Power.pine",
     },
     {
       slug: "chaikin-volatility",
@@ -494,9 +438,7 @@ export const INDICATORS: Indicator[] = (
         ["Length", "10"],
         ["ROC length", "12"],
       ],
-      pine: 5,
       repo: 4,
-      path: "indicators/Chaikin-Volatility.pine",
     },
     {
       slug: "keltner-channels",
@@ -513,9 +455,7 @@ export const INDICATORS: Indicator[] = (
         ["ATR length", "10"],
         ["Average", "EMA"],
       ],
-      pine: 5,
       repo: 4,
-      path: "indicators/Keltner-Channels.pine",
     },
     {
       slug: "mcginley-dynamic",
@@ -527,9 +467,7 @@ export const INDICATORS: Indicator[] = (
       reading:
         "Read it like a smarter moving average: above it is an uptrend, below it a downtrend, and it rarely gets left behind on fast moves.",
       settings: [["Length", "14"]],
-      pine: 6,
       repo: 7,
-      path: "indicators/McGinley-Dynamic.pine",
     },
     {
       slug: "relative-vigor-index",
@@ -541,9 +479,7 @@ export const INDICATORS: Indicator[] = (
       reading:
         "In uptrends bars tend to close above their open. RVGI crossing over its signal line is bullish; crossing under is bearish.",
       settings: [["Length", "10"]],
-      pine: 5,
       repo: 7,
-      path: "indicators/Relative-Vigor-Index.pine",
     },
     {
       slug: "relative-volatility-index",
@@ -558,9 +494,7 @@ export const INDICATORS: Indicator[] = (
         ["Length", "10"],
         ["MA", "SMA 14"],
       ],
-      pine: 5,
       repo: 4,
-      path: "indicators/Relative-Volatility-Index.pine",
     },
     {
       slug: "volatility-ratio",
@@ -575,9 +509,7 @@ export const INDICATORS: Indicator[] = (
         ["Length", "14"],
         ["Breakout level", "0.5"],
       ],
-      pine: 5,
       repo: 4,
-      path: "indicators/Volatility-Ratio.pine",
     },
     {
       slug: "vortex-indicator",
@@ -589,9 +521,7 @@ export const INDICATORS: Indicator[] = (
       reading:
         "VI+ crossing above VI− starts an uptrend; the opposite cross starts a downtrend. The wider the gap, the stronger the move.",
       settings: [["Length", "14"]],
-      pine: 5,
       repo: 7,
-      path: "indicators/Vortex-Indicator.pine",
     },
     {
       slug: "woodies-cci",
@@ -606,9 +536,7 @@ export const INDICATORS: Indicator[] = (
         ["Turbo length", "6"],
         ["CCI length", "14"],
       ],
-      pine: 5,
       repo: 7,
-      path: "indicators/Woodies-CCI.pine",
     },
   ] satisfies Indicator[]
 ).sort((a, b) => a.name.localeCompare(b.name));
@@ -617,5 +545,5 @@ export const COLLECTIONS_URL =
   "https://github.com/AkashSasikumar47?tab=repositories&q=pine-strategy-indicators";
 
 export function sourceUrl(indicator: Indicator) {
-  return `https://github.com/AkashSasikumar47/pine-strategy-indicators-v${indicator.repo}/blob/main/${indicator.path}`;
+  return `https://github.com/AkashSasikumar47/pine-strategy-indicators-v${indicator.repo}/blob/main/indicators/${indicator.slug}.pine`;
 }

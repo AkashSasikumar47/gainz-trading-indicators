@@ -2,7 +2,7 @@
 
 ![GAINZ](./app/opengraph-image.png)
 
-35 open-source TradingView indicators, written in Pine Script and free to use: trend, momentum, volatility, volume and levels. Each one opens with its chart, how to read it, its default settings and a link to the source.
+35 open-source TradingView indicators, written in Pine Script v6 and free to use: trend, momentum, volatility, volume and levels. Each one opens with its chart, how to read it, its default settings and a link to the source.
 
 Live at [gainz-trading-indicators.vercel.app](https://gainz-trading-indicators.vercel.app).
 
